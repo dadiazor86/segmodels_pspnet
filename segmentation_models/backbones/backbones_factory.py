@@ -12,6 +12,9 @@ class BackbonesFactory(ModelsFactory):
         # List of layers to take features from backbone in the following order:
         # (x16, x8, x4, x2, x1) - `x4` mean that features has 4 times less spatial
         # resolution (Height x Width) than input image.
+        
+        #vanilla Encoder
+        'vanilla': ('Conv2d_4', 'Conv2d_3', 'Conv2d_2', 'Conv2d_1', 'Conv2d')
 
         # VGG
         'vgg16': ('block5_conv3', 'block4_conv3', 'block3_conv3', 'block2_conv2', 'block1_conv2'),
